@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="false"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground" >
+
+        <ImageView
+
+            android:id="@+id/recipe_item_image_url"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CCCCCC"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/recipe_item_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:background="@color/background_footer"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColor="@android:color/white"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            tools:text="Recipe Title"
+            android:textAlignment="center"
+            android:ellipsize="end"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
