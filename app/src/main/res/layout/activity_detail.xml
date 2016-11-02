@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_recipe"
             fab:fab_size="mini"
-            fab:fab_label="Recipe"
+            fab:fab_label="@string/btnMenu_Recipe"
             fab:fab_colorNormal="@color/colorAccent"
             fab:fab_colorPressed="@color/colorFABPressed"/>
 
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_favorite"
             fab:fab_size="mini"
-            fab:fab_label="Favorite"
+            fab:fab_label="@string/btnMenu_Favorite"
             fab:fab_colorNormal="@color/colorAccent"
             fab:fab_colorPressed="@color/colorFABPressed"/>
     </com.github.clans.fab.FloatingActionMenu>

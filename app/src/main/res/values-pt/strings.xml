@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Receitas</string>
+    <string name="hint_search">Digite o Título da Receita</string>
+    <string name="title_activity_detail"></string>
+
+    <string name="tab_search" >Busca</string>
+    <string name="tab_favorites">Favoritos</string>
+
+    <string name="msg_added_favorites">Adicionado aos Favoritos</string>
+    <string name="msg_removed_favorites">Excluído dos Favoritos</string>
+    <string name="text_undo">Desfazer</string>
+    <string name="empty_text">Sem receitas para exibir\n no momento</string>
+
+    <string name="menu_share">Compartilhar</string>
+    <string name="share_text">Minha Receita: %1$s</string>
+
+    <string name="btnMenu_Recipe">Receita</string>
+    <string name="btnMenu_Favorite">Favoritar</string>
+</resources>
