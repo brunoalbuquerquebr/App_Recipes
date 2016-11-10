@@ -7,7 +7,6 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.customtabs.CustomTabsIntent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -21,7 +20,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.github.clans.fab.FloatingActionButton;
+
 import br.com.unibratec.app_recipes.model.Recipe;
+
+//import android.support.design.widget.FloatingActionButton;
 
 
 public class MainActivity extends AppCompatActivity implements OnRecipeClickListener {

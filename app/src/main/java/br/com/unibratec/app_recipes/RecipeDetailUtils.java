@@ -2,10 +2,13 @@ package br.com.unibratec.app_recipes;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.support.design.widget.FloatingActionButton;
+
+import com.github.clans.fab.FloatingActionButton;
 
 import br.com.unibratec.app_recipes.database.RecipeContract;
 import br.com.unibratec.app_recipes.database.RecipeProvider;
+
+//import android.support.design.widget.FloatingActionButton;
 
 /**
  * Created by brunoalbuquerque on 30/09/16.
@@ -29,11 +32,11 @@ public class RecipeDetailUtils {
         return isFavorite;
     }
 
-    public static void toggleFavorite(Context ctx, FloatingActionButton fab, String recipe_id){
+    public static void toggleFavorite(Context ctx, FloatingActionButton fab2, String recipe_id){
         if (RecipeDetailUtils.isFavorite(ctx, recipe_id)){
-            fab.setImageResource(R.drawable.ic_favorite);
+            fab2.setImageResource(R.drawable.ic_favorite);
         } else {
-            fab.setImageResource(R.drawable.ic_unfavorite);
+            fab2.setImageResource(R.drawable.ic_unfavorite);
         }
     }
 }

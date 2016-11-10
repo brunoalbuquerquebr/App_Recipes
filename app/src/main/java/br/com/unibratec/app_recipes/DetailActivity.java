@@ -134,7 +134,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         public void onReceive(Context context, Intent intent) {
             fab.setVisibility(View.VISIBLE);
             Recipe recipe = (Recipe)intent.getSerializableExtra(RecipeEvent.EXTRA_RECIPE);
-            //RecipeDetailUtils.toggleFavorite(context, fab, recipe.getRecipe_id());
+            RecipeDetailUtils.toggleFavorite(context, fab2, recipe.getRecipe_id());
         }
     }
 }
