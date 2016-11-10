@@ -109,16 +109,9 @@ public class MainActivity extends AppCompatActivity implements OnRecipeClickList
     class RecipeReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (getResources().getBoolean(R.bool.phone)) {
-                Recipe recipe = (Recipe)intent.getSerializableExtra(RecipeEvent.EXTRA_RECIPE);
-                fab.setVisibility(View.VISIBLE);
-                RecipeDetailUtils.toggleFavorite(context, fab, recipe.getRecipe_id());
-            }else {
-                Recipe recipe = (Recipe)intent.getSerializableExtra(RecipeEvent.EXTRA_RECIPE);
-                fab.setVisibility(View.VISIBLE);
-                RecipeDetailUtils.toggleFavorite(context, fab, recipe.getRecipe_id());
-            }
-
+            Recipe recipe = (Recipe)intent.getSerializableExtra(RecipeEvent.EXTRA_RECIPE);
+            fab.setVisibility(View.VISIBLE);
+            RecipeDetailUtils.toggleFavorite(context, fab, recipe.getRecipe_id());
         }
     }
 
