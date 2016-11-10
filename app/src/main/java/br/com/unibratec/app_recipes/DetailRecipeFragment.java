@@ -10,7 +10,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -28,6 +27,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -109,7 +109,8 @@ public class DetailRecipeFragment extends Fragment {
 
         // Se o objeto mRecipe possui um ID (no banco local), carregue do banco local,
         // senão carregue do servidor.
-        if (mRecipe.getId() > 0){
+        boolean isFavorite = RecipeDetailUtils.isFavorite(getActivity(), mRecipe.getRecipe_id());
+        if (isFavorite){
             // Faz a requisição em background ao banco de dados (ver mCursorCallback)
             getLoaderManager().initLoader(LOADER_DB, null, mCursorCallback);
         } else {
@@ -183,8 +184,10 @@ public class DetailRecipeFragment extends Fragment {
             // perceba que estamos utilizando a Uri específica
             // (veja o método query do RecipeProvider)
             return new CursorLoader(getActivity(),
-                    ContentUris.withAppendedId(RecipeProvider.RECIPES_URI, mRecipe.getId()),
-                    null, null, null, null);
+                    RecipeProvider.RECIPES_URI,
+                    null,
+                    RecipeContract.COL_RECIPE_ID +" = ?",
+                    new String[]{ mRecipe.getRecipe_id() }, null);
         }
 
         @Override
@@ -303,6 +306,7 @@ public class DetailRecipeFragment extends Fragment {
 
             // Exibe o snackbar que permite o "desfazer"
             //TODO Internailizar a aplicação
+            /*
             Snackbar.make(getView(),
                     isFavorite ? R.string.msg_removed_favorites : R.string.msg_added_favorites,
                     Snackbar.LENGTH_LONG)
@@ -312,6 +316,9 @@ public class DetailRecipeFragment extends Fragment {
                             toggleFavorite();
                         }
                     }).show();
+            */
+            Toast.makeText(getActivity(), isFavorite ? R.string.msg_removed_favorites : R.string.msg_added_favorites,
+                    Toast.LENGTH_LONG).show();
         }
     }
 

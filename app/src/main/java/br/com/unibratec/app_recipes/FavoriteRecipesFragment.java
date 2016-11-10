@@ -81,7 +81,7 @@ public class FavoriteRecipesFragment extends Fragment
 
         return view;
     }
-
+    /*
     private void selectRecipe(View view, int position, Cursor cursor) {
         if (cursor.moveToPosition(position)) {
             // Criamos um objeto Recipe para passamos para a MainActivity
@@ -94,6 +94,17 @@ public class FavoriteRecipesFragment extends Fragment
             recipe.setImage_url(cursor.getString(cursor.getColumnIndex(RecipeContract.COL_IMAGE_URL)));
             recipe.setPublisher(cursor.getString(cursor.getColumnIndex(RecipeContract.COL_PUBLISHER)));
             recipe.setSource_url(cursor.getString(cursor.getColumnIndex(RecipeContract.COL_SOURCE_URL)));
+            mRecipeClickListener.onRecipeClick(view, recipe, position);
+        }
+    }
+    */
+
+    private void selectRecipe(View view, int position, Cursor cursor) {
+        if (cursor.moveToPosition(position)) {
+            // Criamos um objeto Movie para passamos para a MainActivity
+            // perceba que esse Movie não tem todos os campos. Pois na tela
+            // de listagem apenas os campos necessários são utilizados
+            Recipe recipe = RecipeDetailUtils.recipeItemFromCursor(cursor);
             mRecipeClickListener.onRecipeClick(view, recipe, position);
         }
     }
