@@ -66,6 +66,10 @@
         android:paddingBottom="10dp"
         android:paddingLeft="10dp"
         fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_showAnimation="@anim/jump_from_down"
+        fab:menu_labels_hideAnimation="@anim/jump_to_down"
+        fab:menu_labels_style="@style/BackgroundLabelsTransparent"
         fab:menu_colorNormal="@color/colorAccent"
         fab:menu_colorPressed="@color/colorFABPressed"
         fab:menu_labels_ellipsize="end"
@@ -77,9 +81,10 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_recipe"
             fab:fab_size="mini"
-            fab:fab_label="@string/btnMenu_Recipe"
             fab:fab_colorNormal="@color/colorAccent"
-            fab:fab_colorPressed="@color/colorFABPressed"/>
+            fab:fab_colorPressed="@color/colorFABPressed"
+            fab:fab_label="@string/btnMenu_Recipe"
+            style="@style/BackgroundLabelsTransparent"/>
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fab2"
@@ -87,9 +92,11 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_favorite"
             fab:fab_size="mini"
-            fab:fab_label="@string/btnMenu_Favorite"
             fab:fab_colorNormal="@color/colorAccent"
-            fab:fab_colorPressed="@color/colorFABPressed"/>
+            fab:fab_colorPressed="@color/colorFABPressed"
+            fab:fab_label="@string/btnMenu_Favorite"
+            style="@style/BackgroundLabelsTransparent"/>
+
     </com.github.clans.fab.FloatingActionMenu>
 
 
