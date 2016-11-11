@@ -48,7 +48,7 @@ public class RecipeDetailUtils {
         recipe.setTitle(cursor.getString(cursor.getColumnIndex(RecipeContract.COL_TITLE)));
         recipe.setImage_url(cursor.getString(cursor.getColumnIndex(RecipeContract.COL_IMAGE_URL)));
         recipe.setPublisher(cursor.getString(cursor.getColumnIndex(RecipeContract.COL_PUBLISHER)));
-        recipe.setSocial_rank(Float.parseFloat(cursor.getString(cursor.getColumnIndex(RecipeContract.COL_SOCIAL_RANK))));
+        recipe.setSource_url(cursor.getString(cursor.getColumnIndex(RecipeContract.COL_SOURCE_URL)));
         return recipe;
     }
 }

@@ -121,8 +121,8 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
     public void customTabs(){
         CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-        builder.setToolbarColor(ActivityCompat.getColor(this, R.color.colorPrimaryDark));
-        CustomTabsIntent intent = new CustomTabsIntent.Builder().build();
+        builder.setToolbarColor(ActivityCompat.getColor(this, R.color.colorAccent));
+        CustomTabsIntent intent = builder.build();
         String urlRecipe = mRecipe.getSource_url();
         intent.launchUrl(this, Uri.parse(urlRecipe));
 
